@@ -17,4 +17,11 @@ para.textContent = 'We hope you enjoyed the ride.';
 
 const clock = document.querySelector('.clock');
 const showClock = () => clock.innerText = (new Date()).toLocaleTimeString(); 
-setInterval(showClock, 10000);
+setInterval(showClock, 1000);
+
+$('.click-me').click( () => $('img').toggle(3000) );
+
+const display = document.querySelector('.display');
+
+document.querySelectorAll('.digits button')
+    .forEach( button => button.addEventListener('click', digitPressed));
